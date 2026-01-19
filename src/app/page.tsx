@@ -104,7 +104,7 @@ export default function Home() {
           height: 25vh !important;
           max-height: 25vh !important;
         }
-        @media (min-width: 991px) {
+        @media (min-width: 1280px) {
           #hero-section-mobile {
             min-height: 600px !important;
             height: 600px !important;
@@ -121,23 +121,28 @@ export default function Home() {
           className="w-full h-full object-cover"
           style={{ objectPosition: 'top center' }}
         />
-        {/* Content container - address and icons with white background for readability */}
-        <div className="absolute bottom-8 md:bottom-12 left-0 right-0 z-10 flex flex-col items-center gap-4 md:gap-6">
-          <p className="text-xl md:text-2xl lg:text-3xl font-bold text-white text-center px-4">
-            Calle Cañaveral, 94
-          </p>
-          <div className="flex flex-wrap justify-center gap-2 md:gap-3 text-sm md:text-base">
-            <div className="flex items-center gap-1 md:gap-2 bg-white/20 backdrop-blur-sm px-2.5 md:px-3 py-1 md:py-1.5 rounded-full">
-              <Award className="w-4 h-4 md:w-5 md:h-5" />
-              <span className="font-semibold text-xs md:text-sm">12 kg</span>
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/70 via-black/30 to-transparent pointer-events-none"></div>
+
+        {/* Content container - address and icons with improved readability */}
+        <div className="absolute bottom-4 md:bottom-6 left-0 right-0 z-10 flex flex-col items-center gap-2 md:gap-3 px-4">
+          <div className="bg-black/60 backdrop-blur-md rounded-lg px-4 py-3 md:px-6 md:py-4 shadow-lg border border-white/10">
+            <p className="text-base md:text-xl lg:text-2xl font-bold text-white text-center">
+              Calle Cañaveral, 94
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-1.5 md:gap-2">
+            <div className="flex items-center gap-1 md:gap-2 bg-black/70 backdrop-blur-md px-2.5 md:px-3 py-1.5 md:py-2 rounded-full border border-white/20">
+              <Award className="w-3.5 h-3.5 md:w-4.5 md:h-4.5 text-white" />
+              <span className="font-semibold text-[10px] md:text-xs text-white">12 kg</span>
             </div>
-            <div className="flex items-center gap-1 md:gap-2 bg-white/20 backdrop-blur-sm px-2.5 md:px-3 py-1 md:py-1.5 rounded-full">
-              <Clock className="w-4 h-4 md:w-5 md:h-5" />
-              <span className="font-semibold text-xs md:text-sm">7-23 Horario</span>
+            <div className="flex items-center gap-1 md:gap-2 bg-black/70 backdrop-blur-md px-2.5 md:px-3 py-1.5 md:py-2 rounded-full border border-white/20">
+              <Clock className="w-3.5 h-3.5 md:w-4.5 md:h-4.5 text-white" />
+              <span className="font-semibold text-[10px] md:text-xs text-white">7-23 Horario</span>
             </div>
-            <div className="flex items-center gap-1 md:gap-2 bg-white/20 backdrop-blur-sm px-2.5 md:px-3 py-1 md:py-1.5 rounded-full">
-              <Zap className="w-4 h-4 md:w-5 md:h-5" />
-              <span className="font-semibold text-xs md:text-sm">8 Máquinas</span>
+            <div className="flex items-center gap-1 md:gap-2 bg-black/70 backdrop-blur-md px-2.5 md:px-3 py-1.5 md:py-2 rounded-full border border-white/20">
+              <Zap className="w-3.5 h-3.5 md:w-4.5 md:h-4.5 text-white" />
+              <span className="font-semibold text-[10px] md:text-xs text-white">8 Máquinas</span>
             </div>
           </div>
         </div>
