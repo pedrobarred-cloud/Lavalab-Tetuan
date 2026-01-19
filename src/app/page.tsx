@@ -97,9 +97,26 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <>
+      <style>{`
+        @media (max-width: 767px) {
+          #hero-section-mobile {
+            min-height: 180px !important;
+            height: 180px !important;
+            max-height: 180px !important;
+          }
+        }
+        @media (min-width: 768px) {
+          #hero-section-mobile {
+            min-height: 600px !important;
+            height: 600px !important;
+            max-height: 600px !important;
+          }
+        }
+      `}</style>
+      <div className="min-h-screen flex flex-col bg-background">
       {/* Hero Section */}
-      <section className="relative w-full" style={{ minHeight: '200px', height: '200px', maxHeight: '200px' }} data-mobile-hero>
+      <section id="hero-section-mobile" className="relative w-full" style={{ minHeight: '180px', height: '180px', maxHeight: '180px' }}>
         <img
           src="https://xmtqaakrlplknmhcmiha.supabase.co/storage/v1/object/public/lavalab/tienda%20lavalab.webp"
           alt="Lavalab Lavandería"
@@ -127,16 +144,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <style jsx>{`
-        @media (min-width: 768px) {
-          [data-mobile-hero] {
-            min-height: 600px !important;
-            height: 600px !important;
-            max-height: 600px !important;
-          }
-        }
-      `}</style>
 
       {/* Features Section */}
       <section className="py-16 px-4">
@@ -177,7 +184,7 @@ export default function Home() {
           <p className="text-center text-muted-foreground text-lg mb-12">
             4 lavadoras y 4 secadoras profesionales de 12kg
           </p>
-          <div className="grid grid-cols-2 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {/* Superwash Card */}
             <Card>
               <CardHeader>
@@ -612,5 +619,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    </>
   )
 }
