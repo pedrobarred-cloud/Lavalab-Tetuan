@@ -97,28 +97,13 @@ export default function Home() {
   ]
 
   return (
-    <>
-      <style>{`
-        #hero-section-mobile {
-          min-height: 600px !important;
-          height: 600px !important;
-          max-height: 600px !important;
-        }
-        @media (max-width: 991px) {
-          #hero-section-mobile {
-            min-height: 25vh !important;
-            height: 25vh !important;
-            max-height: 25vh !important;
-          }
-        }
-      `}</style>
-      <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-background">
       {/* Hero Section */}
-      <section id="hero-section-mobile" className="relative w-full" style={{ minHeight: '600px', height: '600px', maxHeight: '600px' }}>
+      <section className="relative w-full max-h-[25vh] md:max-h-[600px]">
         <img
           src="https://xmtqaakrlplknmhcmiha.supabase.co/storage/v1/object/public/lavalab/tienda%20lavalab.webp"
           alt="Lavalab Lavandería"
-          className="w-full h-full object-cover"
+          className="w-full h-[25vh] md:h-[600px] object-cover"
           style={{ objectPosition: 'top center' }}
         />
         {/* Gradient overlay for better text readability */}
